@@ -1,0 +1,123 @@
+<html>
+<head>
+  <title>This is my seventh web page.</title>
+    <style>
+    body { width: 80%;}
+    #container { width: 80%;
+                 text-align: center;
+                 margin: 0px auto; }
+     #photo { 
+      background-color: efeee;
+      margin-left: auto;
+      margin-right: 0;
+      float: right;
+      width: 200px;
+            }
+    #IMG_3984 {
+      height: auto;
+      width: 300px;
+      border: 1px solid #ddd;
+      border-radius: 50%;
+      padding: 5px;
+      display: black;
+      margin: auto;
+    }
+    .caption {
+      font-size: 10px;
+      font-family: times;
+      text-align: center;
+    }
+    p, td, li {
+      font-size: 10px;
+      font-family: serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+     font-family: serif;
+     font-size: 3em;
+     font-style: italic;
+     font-weight: bold;
+
+    }
+    a { text-decoration: none; }
+    a:visited { background-color: #feeeee; }
+    a:link { background-color: #eeeefe; }
+    a:hover { background-color: #fefeee; }
+
+    #thingsILove { background-color: #feefee; }
+
+    #instruments { font-family: serif;
+                  background-color: #feefee;
+                  border-collapse: collapse;
+                  width: 100%;
+                 }
+    #instruments th, #films td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+
+    #instruments th {
+      font: black cold serif:
+      background-color: #feefee;
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      color: white;
+    }
+    </style>
+  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      // This is where I put my Javascript
+          // Do this whe we click on the clicktoreveal1 button
+      $("#clicktoreveal1").click(function() {
+        // Run this when I click on this button
+         $("#clicktoreveal1").html("Violin");
+      });
+            // Do this whe we click on the clicktoreveal2 button
+      $("#clicktoreveal2").click(function() {
+        // Run this when I click on this button
+         $("#clicktoreveal2").html("Piano");
+      });
+            // Do this whe we click on the clicktoreveal3 button
+      $("#clicktoreveal3").click(function() {
+        // Run this when I click on this button
+         $("#clicktoreveal3").html("Guitar");
+      });
+    </script>
+<div id="photo">
+  <img id="IMG_3984" src="IMG_3984.jpg" />
+  <p class="caption">Mel Augenstein</p>
+  <p class="caption">Photo by author</p>
+I am a student at <a href="https://www.msudenver.edu/"> MSU Denver.</a>
+  </div>
+<body>
+<div id="container">
+<h1> My seventh web page. Yay!</h1>
+  <p>This is my seventh web page…</p>
+<h2>About me</h2>
+  
+<div id="thingsILove">
+  <h3>Things I love</h3>
+  <p>Here are three things I love:</p>
+<ol>
+  <li>Weather</li>
+  <li>Music</li>
+  <li>Coffee</li>
+</ol>
+</div>
+
+<div id="instruments">
+Some other things about me, I play the following instruments:
+<ul>
+  <li><button id=clicktoreveal1>Click to reveal...</button>Violin</li>
+  <li><button id=clicktoreveal2>Click to reveal...</button>Piano</li>
+  <li><button id=clicktoreveal3>Click to reveal...</button>Guitar</li>
+</ul>
+</div>
+  </div>
+</body>
+</html>
+</div>
+  </div>
+</body>
+</html>
