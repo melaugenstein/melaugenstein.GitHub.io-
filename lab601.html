@@ -94,6 +94,16 @@
            console.log("toggle the photo");
            $("#IMG_3984").fadeToggle();
          });
+
+         $(document).ready( function() {
+        // your code will go in here.
+        $("#appear").click( function() {
+           // if someone clicks on appear, this runs!
+           console.log("someone clicked on button appear.");
+           $("#hidden_text").text("Live Long and Prosper.");
+        });
+     });
+
         // closing document ready
         });
     </script>
@@ -106,7 +116,8 @@ I am a student at <a href="https://www.msudenver.edu/"> MSU Denver.</a>
   </div>
 <body>
 <div id="container">
-<h1> My seventh web page. Yay!</h1>
+<h1> <div id="hidden_text"><button id="appear">Click here to see the hidden text!</button>
+</div>My seventh web page. Yay!</h1>
   <p>This is my seventh web page…</p>
 <h2>About me</h2>
   
