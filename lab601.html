@@ -77,10 +77,10 @@
          $("#div_ctr1").html("Violin");
       });
             // Do this whe we click on the clicktoreveal2 button
-      $("#div_ctr2").click(function() {
+      $("##clicktoreveal2").click(function() {
         // Run this when I click on this button
          console.log("clicked on second button")
-         $("#clicktoreveal2").html("Piano");
+         $("#div_ctr2").html("Piano");
       });
             // Do this whe we click on the clicktoreveal3 button
       $("#clicktoreveal3").click(function() {
@@ -88,6 +88,12 @@
          console.log("clicked on third button")
          $("#div_ctr3").html("Guitar");
       });
+
+      // Toggle photo on/off
+         $("#togglephoto").click(function() {
+           console.log("toggle the photo");
+           $("#IMG_3984").fadeToggle();
+         });
         // closing document ready
         });
     </script>
@@ -96,6 +102,7 @@
   <p class="caption">Mel Augenstein</p>
   <p class="caption">Photo by author</p>
 I am a student at <a href="https://www.msudenver.edu/"> MSU Denver.</a>
+  <button id="togglephoto">Toggle the photo on/off.</button>
   </div>
 <body>
 <div id="container">
