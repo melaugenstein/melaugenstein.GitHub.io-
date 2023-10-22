@@ -74,10 +74,10 @@
       $("#clicktoreveal1").click(function() {
         // Run this when I click on this button
          console.log("clicked on first button")
-         $("#clicktoreveal1").html("Violin");
+         $("#div_ctr1").html("Violin");
       });
             // Do this whe we click on the clicktoreveal2 button
-      $("#clicktoreveal2").click(function() {
+      $("#div_ctr2").click(function() {
         // Run this when I click on this button
          console.log("clicked on second button")
          $("#clicktoreveal2").html("Piano");
@@ -86,7 +86,7 @@
       $("#clicktoreveal3").click(function() {
         // Run this when I click on this button
          console.log("clicked on third button")
-         $("#clicktoreveal3").html("Guitar");
+         $("#div_ctr3").html("Guitar");
       });
         // closing document ready
         });
@@ -116,9 +116,12 @@ I am a student at <a href="https://www.msudenver.edu/"> MSU Denver.</a>
 <div id="instruments">
 Some other things about me, I play the following instruments:
 <ul>
-  <li><button id=clicktoreveal1>Click to reveal...</button>Violin</li>
-  <li><button id=clicktoreveal2>Click to reveal...</button>Piano</li>
-  <li><button id=clicktoreveal3>Click to reveal...</button>Guitar</li>
+  <li><div id="div_ctr1"><button id=clicktoreveal1>Click to reveal...</button></div></li>
+  <li>Violin</li>
+  <li><div id="div_ctr2"><button id=clicktoreveal2>Click to reveal...</button</div>></li>
+  <li>Piano</li>
+  <li><div id="div_ctr3"><button id=clicktoreveal3>Click to reveal...</button></div></li>li>
+  <li>Guitar</li>
 </ul>
 </div>
   </div>
