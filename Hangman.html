@@ -1,4 +1,6 @@
-<html><head>
+<!doctype html>
+<html>
+    <head>
     <title>Hangman!</title>
     <style>
       #alphabet { margin: auto;
@@ -44,7 +46,6 @@
                     letter = $(this).text();
                     console.log("clicked on ", letter);
 
-
                     // make a line through the letter
                     $(this).css("text-decoration", "line-through");
 
@@ -61,13 +62,11 @@
                       tries = tries - 1
                       $("#guesses").text("Guesses left: "+tries);
 
-
                       // are they out of tries? then they lost!
                         if (tries < 1) {
                             gameLost = true;
                             $("#info").text("Sorry, you're out of guesses. YOU LOSE!");
-                            
-
+                        }
                     
                     // otherwise, put a line through it and
                     // add it to the found letters
@@ -88,23 +87,20 @@
                             console.log("word is ", word);
                             console.log("blank is ", blank);
                         }
-
-
                      
                       // check if the player has won the game
                             if (! blank.includes("-")) {
                                 gameWon = true;
-                                $("#info").text("You WON! Great job.");
-                    }
-
+                                $("#info").text("You WON! Great job!");
                         }
 
-                    // add the letter to letters already tried
-                        triedLetters = triedLetters + letter;
-                        console.log("triedLetters is ", triedLetters)
                     }
 
-                  };
+                    // add the letter to letters already tried
+                    triedLetters = triedLetters + letter;
+                    console.log("triedLetters is ", triedLetters)
+                    }
+                });
 
              // 
            
