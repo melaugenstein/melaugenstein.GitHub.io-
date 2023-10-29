@@ -89,20 +89,26 @@
                             console.log)("blank is ", blank);
                         }
 
+
                      
                       // check if the player has won the game
-
-
+                            if (! blank.includes("-")) {
+                                gameWon = true;
+                                $("#info").text("You WON! Great job.");
                     }
 
-                    // add the letter to letters already tried
+                        }
 
-                  
-              
+                    // add the letter to letters already tried
+                        triedLetters = triedLetters + letter;
+                        consol.log("triedLetters is ", triedLetters)
+                    }
+
+                  });
 
              // 
            
-         );
+         });
       
     </script>
   </head>
