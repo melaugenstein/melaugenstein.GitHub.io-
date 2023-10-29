@@ -11,7 +11,7 @@
             }
       #info { padding: 20px; 
               font-color: red;
-              background-color: yellow; 
+              background-color: cyan; 
             }
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -47,8 +47,7 @@
                     console.log("clicked on ", letter);
 
                     // make a line through the letter
-                    $(this).css("text-decoration", "line-through");
-                      $(this).css("text-decoration-color: red");
+                    $(this).css("text-decoration", "line-through", "text-decoration-color: red");
                     
       
                     // if the letter has already been clicked on, 
