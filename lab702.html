@@ -25,8 +25,13 @@
     fillOpacity: 0.5,
     radius: 200
 }).addTo(map);
+	circle.bindPopup("Golden High School");
 
-   
+      var polygon = L.polygon([
+    [39.7436261, -105.2114020],
+    [39.7436261, -105.2114021],
+    [39.7436262, -105.2114022]
+]).addTo(map);
 
     var popup = L.popup()
     .setLatLng([39.7555,-105.2211])
