@@ -13,45 +13,17 @@
 <div id="map"</div>
 <script>
 
-    var map = L.map("map").setView([32.8241205,-117.438632], 10);
+    var map = L.map("map").setView([39.8241205,-104.438632], 10);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 20,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-    var marker = L.marker([32.9443763,-117.1326113]).addTo(map);
-      marker.bindPopup("Where I stay when I visit.");
-    
-    var circle = L.circle([32.655091, -117.135699], {
-    color: 'red',
-    fillColor: '#f03',
-    fillOpacity: 0.5,
-    radius: 500
-    }).addTo(map);
-      circle.bindPopup("Where I caught a leopard shark.");
-
-    var polygon = L.polygon([
-    [32.733228, -117.146282],
-    [32.738249, -117.146453],
-    [32.738291, -117.148759],
-    [32.738390, -117.149617],
-    [32.739325, -117.149630],
-      [32.739523, -117.151079],
-      [32.740109, -117.151059],
-      [32.740118, -117.151454],
-      [32.736571, -117.155391],
-      [32.734223, -117.155493],
-      [32.732860, -117.154841],
-      [32.732898, -117.154805],
-      [32.733568, -117.151979],
-      [32.733101, -117.149752],
-      [32.734288, -117.148369]
-    ]).addTo(map);
-       polygon.bindPopup("My favorite part of San Diego.");
+   
 
     var popup = L.popup()
-    .setLatLng([])
-    .setContent("<b>San Diego, CA</b><br>One of my favorite places to visit")
+    .setLatLng([39.8241205,-104.438632])
+    .setContent("<b>Denver, CO</b><br>My Home Town")
     .openOn(map);
 
 </script>
