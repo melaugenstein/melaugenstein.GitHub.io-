@@ -31,7 +31,15 @@
     var marker = L.marker([39.7555,-105.2211]).addTo(map);
 	marker.bindPopup("Golden, Co, My Home Town");
 
+	map.on('click', onMapClick);
+
+   
+
+    var popup = L.popup()
+    .setLatLng([39.7555,-105.2211])
+    .setContent("<b>San Diego, CA</b><br>Golden, Co, My Home Town")
     .openOn(map);
+    </script>
 
 </script>
 </body>
