@@ -27,17 +27,10 @@
 }).addTo(map);
 	circle.bindPopup("Golden High School");
 
-      var polygon = L.polygon([
-    [39.7436261, -105.2114020],
-    [39.7436261, -105.2114021],
-    [39.7436262, -105.2114022]
-]).addTo(map);
 
     var marker = L.marker([39.7555,-105.2211]).addTo(map);
-	
-    var popup = L.popup()
-    .setLatLng([39.7555,-105.2211])
-    .setContent("<b>Golden, CO</b><br>My Home Town")
+	marker.bindPopup("Golden, Co, My Home Town");
+
     .openOn(map);
 
 </script>
