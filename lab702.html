@@ -19,6 +19,13 @@
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
+	  var circle = L.circle([39.7436260, -105.2114009], {
+    color: 'pink',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 50
+}).addTo(map);
+
    
 
     var popup = L.popup()
