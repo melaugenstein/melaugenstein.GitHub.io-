@@ -19,7 +19,7 @@
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
-	  var circle = L.circle([39.7436260, -105.2114009], {
+    var circle = L.circle([39.7436260, -105.2114009], {
     color: 'purple',
     fillColor: '#f03',
     fillOpacity: 0.5,
@@ -27,6 +27,13 @@
 }).addTo(map);
 	circle.bindPopup("Golden High School");
 
+   var polygon = L.polygon([
+    [39.7401670, -105.2201954],
+    [39.7447512, -105.2240525],
+    [39.7429057, -105.2284628],
+    [39.7399278, -105.2245774]
+]).addTo(map);
+	polygon.bindPopup("Colorado School of Mines");
 
     var marker = L.marker([39.7555,-105.2211]).addTo(map);
 	marker.bindPopup("Golden, Co, My Home Town");
@@ -34,11 +41,6 @@
 	map.on('click', onMapClick);
 
    
-
-    var popup = L.popup()
-    .setLatLng([39.7555,-105.2211])
-    .setContent("<b>San Diego, CA</b><br>Golden, Co, My Home Town")
-    .openOn(map);
     </script>
 
 </script>
