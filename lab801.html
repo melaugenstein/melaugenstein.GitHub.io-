@@ -66,13 +66,13 @@ map = L.map('map').setView([0,0], 10);
 		// this is an object to keep track of our three basemaps -- ##2 here
     
 var baseMaps = { "OpenStreetMap" : OSMTiles,
-			   "Humanitarian OSM" : HOTOSMTiles,
+	      "Humanitarian OSM" : HOTOSMTiles,
               "OpenTopoMap" : OpenTopoMap };
 
 
 
 		// the control let's the user turn on / off layers -- ##3 here
-    var layerControl = L.control.layers(baseMaps, null).addto(map);
+    var layerControl = L.control.layers(baseMaps,null).addto(map);
 
 		// let's add the Denver ACS data -- ##4 here
 		$.getJSON('acs_denver_2021.geojson', function(data) {
