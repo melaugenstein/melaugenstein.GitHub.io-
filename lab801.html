@@ -1,4 +1,6 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
 	<base target="_top">
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -46,11 +48,9 @@
 	$(document).ready(function() {
 
 		// let's create our basemap! -- ##1 here
-    
-map = L.map('map').setView([0,0], 10);
+    		map = L.map('map').setView([0,0], 10);
 
 
-		
 		// let's add three sets of background tiles - one from OSM,  one from HOT OSM, and one from openTopoMap
 		var OSMTiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
 			maxZoom: 19,
@@ -64,24 +64,24 @@ map = L.map('map').setView([0,0], 10);
 			attribution: 'Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, <a href="http://viewfinderpanoramas.org">SRTM</a> | Map style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'});
 
 		// this is an object to keep track of our three basemaps -- ##2 here
-    
-var baseMaps = { "OpenStreetMap": OSMTiles,
-	      "Humanitarian OSM": HOTOSMTiles,
-              "OpenTopoMap": OpenTopoMap };
+    		var baseMaps = { "OpenStreetMap" : OSMTiles,
+	      			 "Humanitarian OSM" : HOTOSMTiles,
+             			 "OpenTopoMap": OpenTopoMap };
 
 		// the control let's the user turn on / off layers -- ##3 here
-    var layerControl = L.control.layers(baseMaps,null).addto(map);
+    		var layerControl = L.control.layers(baseMaps,null).addTo(map);
 
 		// let's add the Denver ACS data -- ##4 here
 		$.getJSON('/acs_denver_2021.geojson', function(data) {
 			// convert the file (data) into a layer
 			acsDenver2021Layer = L.geoJSON(data).addTo(map);
+			
 			// move the map to the area of the data
 			map.panTo(acsDenver2021Layer.getBounds().getCenter());
+			
 			// add map to the layer controls
 			layerControl.addOverlay(acsDenver2021Layer, "Census 2021");
 		});
-
 
 		// let's try to add some remote DRCOG data
 		$.getJSON('https://data.colorado.gov/api/geospatial/trm9-dm4m?method=export&format=GeoJSON', function(data) {
