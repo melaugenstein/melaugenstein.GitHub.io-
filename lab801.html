@@ -75,7 +75,7 @@ var baseMaps = { "OpenStreetMap" : OSMTiles,
     var layerControl = L.control.layers(baseMaps,null).addto(map);
 
 		// let's add the Denver ACS data -- ##4 here
-		$.getJSON('acs_denver_2021.geojson', function(data) {
+		$.getJSON('/acs_denver_2021.geojson', function(data) {
 			// convert the file (data) into a layer
 			acsDenver2021Layer = L.geoJSON(data).addTo(map);
 			// move the map to the area of the data
