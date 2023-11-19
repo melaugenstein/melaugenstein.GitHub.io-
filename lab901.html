@@ -74,13 +74,13 @@
 		// function to style me choropleth map
 		function style1(feature) {
 			d = feature.properties.PCT_POVERTY;
-			answer = d > 30 ? '#6e016b' :
-				 d > 20 ? '#88419d' :
+			answer = d > 30 ? '#e0ecf4' :
+				 d > 20 ? '#9ebcda' :
 				 d > 15 ? '#8c6bb1' :
 				 d > 5 ? '#8c96c6' :
-				 d > 3 ? '#9ebcda' :
-				 d > 1 ? '#bfd3e6' :
-				 	 '#e0ecf4';
+				 d > 3 ? '#8c6bb1' :
+				 d > 1 ? '#88419d' :
+				 	 '#6e016b';
 			styleReturn = {
 				fillcolor : answer,
 				weight : 1,
