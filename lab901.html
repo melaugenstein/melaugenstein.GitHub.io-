@@ -94,7 +94,12 @@
 		$.getJSON('./acs_denver_2021.geojson', function(data) {
 			// convert the file (data) into a layer
 			acsDenver2021Layer = L.geoJSON(data,
-						       { style: style1 })
+						       { style: style1,
+						       onEachFeatuure: function(feature, layer) {
+							       layer.bindPopup("Percent Age Less Than 18: " +
+									       feature.properties.PCT_AGELESS18 + '%');
+						       }
+						       })
 							.addTo(map);
 			
 			// move the map to the area of the data
