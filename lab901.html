@@ -73,15 +73,14 @@
 
 		// function to style me choropleth map
 		function style1(feature) {
-			d = feature.properties.PCT_HISPANIC;
-			answer = d > 50 ? '#6e016b' :
-				 d > 40 ? '#88419d' :
-				 d > 30 ? '#8c6bb1' :
-				 d > 20 ? '#8c96c6' :
-				 d > 10 ? '#9ebcda' :
-				 d > 5 ? '#bfd3e6' :
-				 d > 1 ? '#e0ecf4' :
-					  ;
+			d = feature.properties.PCT_POVERTY;
+			answer = d > 30 ? '#6e016b' :
+				 d > 20 ? '#88419d' :
+				 d > 15 ? '#8c6bb1' :
+				 d > 5 ? '#8c96c6' :
+				 d > 3 ? '#9ebcda' :
+				 d > 1 ? '#bfd3e6' :
+				 	 '#e0ecf4';
 			styleReturn = {
 				fillcolor : answer,
 				weight : 1,
@@ -99,9 +98,9 @@
 			// convert the file (data) into a layer
 			acsDenver2021Layer = L.geoJSON(data,
 						       { style: style1,
-						       onEachFeatuure: function(feature, layer) {
-							       layer.bindPopup("Percent Hispanic: " +
-									       feature.properties.PCT_HISPANIC + '%');
+						       onEachFeature: function(feature, layer) {
+							       layer.bindPopup("Percent Poverty: " +
+									       feature.properties.PCT_POVERTY + '%');
 						       }
 						       })
 							.addTo(map);
