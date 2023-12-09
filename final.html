@@ -89,15 +89,15 @@
 		// function to style my choropleth map
 		function style1(feature) {
 			d = feature.properties.FEMALE;
-			answer = d > 5000 ? '#4d004b' :
-				 d > 4000 ? '#810f7c' :
-				 d > 3000 ? '#88419d' :
-				 d > 2000 ? '#8c6bb1' :
-				 d > 1500 ? '#8c96c6' :
-				 d > 1000 ? '#9ebcda' :
-				 d > 500 ?  '#bfd3e6' :
-				 d > 1 ?  '#e0ecf4' :
-				 	  '#f7fcfd';
+			answer = d > 5000 ? '#67001f' :
+				 d > 4000 ? '#980043' :
+				 d > 3000 ? '#ce1256' :
+				 d > 2000 ? '#e7298a' :
+				 d > 1500 ? '#df65b0' :
+				 d > 1000 ? '#c994c7' :
+				 d > 500 ?  '#d4b9da' :
+				 d > 1 ?  '#e7e1ef' :
+				 	  '#f7f4f9';
 			styleReturn = {
 				fillColor : answer,
 				weight : 1,
@@ -140,8 +140,8 @@
 legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend');
-	 colors = ['#f7fcfd','#e0ecf4','#bfd3e6' ,'#9ebcda','#8c96c6','#8c6bb1',
-                 '#88419d','#810f7c', '#4d004b'];
+	 colors = ['#f7f4f9','#e7e1ef','#d4b9da' ,'#c994c7','#df65b0','#e7298a',
+                 '#ce1256','#980043', '#67001f'];
        labels = ['0 - 500', '500 - 1000', '1000 - 1500', '1500 - 2000', '2000 - 3000', 
                  '3000 - 4000', '4000 - 5000','5000+' ];
     // note that you'll want to change these values to match your classes
