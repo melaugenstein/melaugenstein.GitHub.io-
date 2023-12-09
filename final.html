@@ -156,6 +156,41 @@ legend.onAdd = function (map) {
 
 legend.addTo(map);
 
+ var marker = L.marker([39.7602522,-104.9811157]).addTo(map);
+	marker.bindPopup("Sacred Heart House of Denver");
+
+    var marker = L.marker([39.7541030,-105.0002240]).addTo(map);
+	marker.bindPopup("Project Safeguard Denver");
+
+    var marker = L.marker([39.7377330,-104.9951115]).addTo(map);
+	marker.bindPopup("Colorado Coalition Against Domestic Violence");
+
+    var marker = L.marker([39.7406649,-105.0493554]).addTo(map);
+	marker.bindPopup("Volunteers of America");
+
+    var marker = L.marker([39.7828535,-104.9368847]).addTo(map);
+	marker.bindPopup("Samaritan House");
+
+    var marker = L.marker([39.7734633,-104.9181820]).addTo(map);
+	marker.bindPopup("Denver Rescue Mission");
+
+   var marker = L.marker([39.7570843,-105.0254975]).addTo(map);
+	marker.bindPopup("Lambuth Family Center");
+
+   var marker = L.marker([39.6567346,-104.9842448]).addTo(map);
+	marker.bindPopup("Family Tree House of Hope");
+
+   var marker = L.marker([39.6859059,-104.9391571]).addTo(map);
+	marker.bindPopup("Project Safeguard Glendale");
+
+   var marker = L.marker([39.7546497,-104.9881509]).addTo(map);
+	marker.bindPopup("Denver Rescue Mission Lawrence Street");
+
+   var marker = L.marker([39.7504333,-104.9866068]).addTo(map);
+	marker.bindPopup("Urban Peak Drop In Center");
+		
+	map.on('click', onMapClick);
+
 	// end document ready
 	});
 
