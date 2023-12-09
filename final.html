@@ -88,7 +88,7 @@
 
 		// function to style my choropleth map
 		function style1(feature) {
-			d = feature.properties.FEMALE;
+			d = feature.properties.FEMALE_MOE;
 			answer = d > 75 ? '#4d004b' :
 				 d > 50 ? '#810f7c' :
 				 d > 40 ? '#88419d' :
@@ -117,7 +117,7 @@
 						       { style: style1,
 						       onEachFeature: function(feature, layer) {
 							       layer.bindPopup("Percent Women: " +
-									       feature.properties.FEMALE + '%');
+									       feature.properties.FEMALE_MOE + '%');
 						       }
 						       })
 							.addTo(map);
