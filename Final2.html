@@ -1,0 +1,62 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+	<style>
+		#map { height: 375px;
+		     width: 705px; }
+  html, body { height: 100%; }
+  #map { height: 80%; width: 95%; }
+  #map-title { width: 100%; }
+
+	</style>	
+</head>
+<body class="">
+
+<div id="map-title"><h1>My Amazing First Leaflet Map!</h1> </div>
+  
+<div id="map"</div>
+
+
+<script>
+
+    var map = L.map("map").setView([39.7555,-105.2211], 14);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 15,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var circle = L.circle([39.7436260, -105.2114009], {
+    color: 'purple',
+    fillColor: '#f03',
+    fillOpacity: 0.5,
+    radius: 200
+}).addTo(map);
+	circle.bindPopup("Golden High School");
+
+   var polygon = L.polygon([
+    [39.7401670, -105.2201954],
+    [39.7447512, -105.2240525],
+    [39.7429057, -105.2284628],
+    [39.7399278, -105.2245774]
+]).addTo(map);
+	polygon.bindPopup("Colorado School of Mines");
+
+    var marker = L.marker([39.7555,-105.2211]).addTo(map);
+	marker.bindPopup("Golden, Co, My Home Town");
+
+    var marker = L.marker([39.7544619,-105.2201664]).addTo(map);
+	marker.bindPopup("Woody's Pizza");
+
+    var marker = L.marker([39.7574882,-105.2223803]).addTo(map);
+	marker.bindPopup("Parfet Park");
+
+	map.on('click', onMapClick);
+
+   
+    </script>
+
+</script>
+</body>
+</html>
