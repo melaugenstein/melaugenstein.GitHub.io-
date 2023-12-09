@@ -88,7 +88,7 @@
 
 		// function to style my choropleth map
 		function style1(feature) {
-			d = feature.properties.PCT_HISPANIC;
+			d = feature.properties.FEMALE;
 			answer = d > 75 ? '#4d004b' :
 				 d > 50 ? '#810f7c' :
 				 d > 40 ? '#88419d' :
@@ -116,8 +116,8 @@
 			acsDenver2021Layer = L.geoJSON(data,
 						       { style: style1,
 						       onEachFeature: function(feature, layer) {
-							       layer.bindPopup("Percent Hispanic: " +
-									       feature.properties.PCT_HISPANIC + '%');
+							       layer.bindPopup("Percent Women: " +
+									       feature.properties.FEMALE + '%');
 						       }
 						       })
 							.addTo(map);
@@ -166,7 +166,7 @@ legend.addTo(map);
 
 
 <div id="header">
-	<h1><a href="https://www.census.gov/programs-surveys/acs">Percentage of Hispanic People (Census) data</a></h1>
+	<h1><a href="https://www.census.gov/programs-surveys/acs">Percentage of Women and Locations of Women's Resources (Census) data</a></h1>
 	<p>Data from <a href="https://denvergov.org/opendata/dataset/city-and-county-of-denver-american-community-survey-blk-grp-2017-2021">Denver Open Data</a></p>
 </div>
 <div id="map"></div>
